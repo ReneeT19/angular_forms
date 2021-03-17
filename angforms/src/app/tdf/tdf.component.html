@@ -1,0 +1,27 @@
+{{diagnostic}}
+<br>
+<div class="container">
+    <h1>Employee Form</h1>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required
+            [(ngModel)]="model.name" name="name">
+        </div>
+
+        <div class="form-group">
+            <label for="designation">Designation</label>
+            <input type="text" class="form-control" id="designation"
+            [(ngModel)]="model.designation" name="designation">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
+<div class="form-group">
+    <label for="skills">Skills</label>
+    <select class="form-control" id="skills" required
+    [(ngModel)]="model.skills" name="skills">
+        <option *ngFor="let ski of skills" [value]="ski">{{ski}}</option>
+    </select>
+</div>
